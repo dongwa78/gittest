@@ -26,13 +26,10 @@
     <div class="container">
         <h1>컨텐츠 입력 박스</h1>
         
-        <button class="red-button">빨간 버튼</button>
-        <a href="subpage01.htm">test test test test 하하하dssss ㄴㅇㄹㄴㄹ</a>
-        
         <div class="boxes-wrapper">
-            <div class="box">
-                <h2>박스 1</h2>
-                <div class="box-content"></div>
+            <div class="box" id="box1">
+                <h2 class="box-title collapsible" id="box1Title">박스 1</h2>
+                <div class="box-content" id="box1Content"></div>
             </div>
             
             <div class="box">
@@ -60,6 +57,14 @@
             link.addEventListener('click', () => {
                 navbarMenu.classList.remove('active');
             });
+        });
+
+        // 첫 번째 박스 접기/펼치기
+        const box1Title = document.getElementById('box1Title');
+        const box1 = document.getElementById('box1');
+
+        box1Title.addEventListener('click', () => {
+            box1.classList.toggle('collapsed');
         });
     </script>
 </body>

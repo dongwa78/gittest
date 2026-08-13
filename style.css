@@ -157,6 +157,30 @@ h1 {
     white-space: pre-wrap;
 }
 
+.box-content.collapsed {
+    display: none;
+}
+
+/* 첫 번째 박스 제목 스타일 */
+.box-title {
+    cursor: pointer;
+    user-select: none;
+}
+
+.box-title:hover {
+    color: #4CAF50;
+}
+
+/* 박스 접기 스타일 */
+.box.collapsed {
+    min-height: auto;
+    padding-bottom: 10px;
+}
+
+.box.collapsed .box-content {
+    display: none;
+}
+
 .red-button {
     background-color: red;
     color: white;
