@@ -4,8 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test-Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <a href="subpage01.htm">test test test test 하하하dssss ㄴㅇㄹㄴㄹ</a>
+    <!-- 메뉴바 -->
+    <div class="navbar">
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="navbar-menu" id="navbarMenu">
+            <a href="#menu1">메뉴1</a>
+            <a href="#menu2">메뉴2</a>
+            <a href="#menu3">메뉴3</a>
+            <a href="#menu4">메뉴4</a>
+            <a href="#menu5">메뉴5</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>컨텐츠 입력 박스</h1>
+        
+        <button class="red-button">빨간 버튼</button>
+        <a href="subpage01.htm">test test test test 하하하dssss ㄴㅇㄹㄴㄹ</a>
+        
+        <div class="boxes-wrapper">
+            <div class="box">
+                <h2>박스 1</h2>
+                <div class="box-content"></div>
+            </div>
+            
+            <div class="box">
+                <h2>박스 2</h2>
+                <div class="box-content"></div>
+            </div>
+            
+            <div class="box">
+                <h2>박스 3</h2>
+                <div class="box-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navbarMenu = document.getElementById('navbarMenu');
+
+        hamburger.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        // 메뉴 클릭 시 메뉴 닫기
+        document.querySelectorAll('.navbar-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
